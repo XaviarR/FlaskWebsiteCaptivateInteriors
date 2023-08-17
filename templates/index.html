@@ -1,0 +1,83 @@
+{% extends 'base.html' %} 
+{% block head %}
+
+{% endblock %}
+    
+{% block body %}
+  
+    <div class="row border" >
+      <div class="col display-6 text-center">Restaurants</div>
+        <div class="row border">
+          <div class="col-sm-3 container border">
+            <img src="{{url_for('static', filename='res_2.webp')}}" style="height: 70%; width: 100%"/>       
+          </div>
+          <div class="col-sm-6 container">
+            <img src="{{url_for('static', filename='res_1.webp')}}" style="height: 100%; width: 100%"/>
+          </div>
+          <div class="col-sm-3 container">
+            <img src="{{url_for('static', filename='res_3.webp')}}" style="height: 70%; width: 100%"/>
+          </div>
+          <p class="text-center">
+            Captivate Interiors have designed some interior decorations for restaurants. The beautiful and sleek designs help display Captivate interiors knowledge.
+          </p>
+        </div>
+    </div>
+    <div class="row border" >
+      <div class="col display-6 text-center">Hotels</div>
+        <div class="row border">
+          <div class="col container border">
+            <img src="{{url_for('static', filename='hotel_1.jpg')}}" style="height: 60%; width: 100%"/>
+          </div>
+          <div class="col-sm-6 container border">
+            <img src="{{url_for('static', filename='hotel_2.jpg')}}" style="height: 100%; width: 100%"/>
+          </div>
+          <div class="col-sm-3 container border">
+            <img src="{{url_for('static', filename='hotel_3.jpg')}}" style="height: 60%; width: 100%"/>
+          </div>
+          <p class="text-center">
+            Captivate interiors have helped design the interiors for Hotels with their well known reputation of bright colors.
+          </p>
+        </div>
+    </div>
+    <div class="row border" >
+      <div class="col display-6 text-center">Offices</div>
+        <div class="row border">
+          <div class="col-sm-3 container border">
+            <img src="{{url_for('static', filename='office_1.jpg')}}" style="height: 60%; width: 100%"/>
+          </div>
+          <div class="col-sm-6 container border">
+            <img src="{{url_for('static', filename='office_2.jpg')}}" style="height: 100%; width: 100%"/>
+          </div>
+          <div class="col-sm-3 container border">
+            <img src="{{url_for('static', filename='office_3.jpg')}}" style="height: 60%; width: 100%"/>
+          </div>
+          <p class="text-center">
+            Captivate interiors also offer more bussiness appropiate designs that offer proffesionalism and more modern style of design.
+          </p>
+        </div>
+    </div>
+    <div class="row border" >
+      <div class="col display-6 text-center">Homes</div>
+        <div class="row border">
+          <div class="col-sm-3 container border">
+            <img src="{{url_for('static', filename='home_1.jpg')}}" style="height: 60%; width: 100%"/>
+          </div>
+          <div class="col-sm-6 container border">
+            <img src="{{url_for('static', filename='home_2.jpg')}}" style="height: 100%; width: 100%"/>
+          </div>
+          <div class="col-sm-3 container border">
+            <img src="{{url_for('static', filename='home_3.jpg')}}" style="height: 60%; width: 100%"/>
+          </div>
+          <p class="text-center">
+            Home design can come in all types of style, wheather it be a for a more cool style or modern approach, Captivate interiors can style in many different feelings.
+          </p>
+        </div>
+    </div>
+
+  </section>
+  {% endblock %} 
+  
+  {% block footer %}
+
+  {% endblock %}
+</html>

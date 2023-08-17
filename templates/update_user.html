@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block head %}
+{% endblock %}
+
+{% block body %}
+<h1>Update User</h1>
+<br/>
+<form action="/user/update/{{ user_to_update.id }}" method="POST">
+    <input type="text" placeholder="Name" name="name" value="{{user_to_update.name}}">
+    <input type="text" placeholder="Email" name="email" value="{{user_to_update.email}}">
+    <input type="submit" value="Update" class="btn btn-primary">
+</form>
+<br/><br/>
+{% endblock %}
+
+{% block footer %}
+{% endblock %}
+

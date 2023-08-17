@@ -1,0 +1,57 @@
+{% extends "base.html" %}
+
+{% block head %}
+
+{% endblock %}
+
+{% block body %}
+<!--Body--> 
+        <div class="col-sm-3">
+            <img src="{{url_for('static', filename='mirror.webp')}}" style="height: 100%; width: 100%"/>
+            <p>
+              Mirror for $393
+            </p>
+        </div>
+
+        <div class="col-sm-3">
+            <img src="{{url_for('static', filename='table.webp')}}" style="height: 100%; width: 100%"/>
+            <p>
+              Table for $399.95
+            </p>
+          </div>
+        </div>
+
+        <div class="col-sm-3">
+            <img src="{{url_for('static', filename='wallpaper.jpg')}}" style="height: 100%; width: 100%"/>
+          <p>
+            Wallpaper for $469.20
+          </p>
+        </div>
+
+        <div class="col-sm-3">
+            <img src="{{url_for('static', filename='lights.png')}}" style="height: 100%; width: 100%"/>
+          <p>
+            Lights for $27.30
+          </p>
+        </div>
+
+        <div class="col-sm-3">
+            <img src="{{url_for('static', filename='bed_1.webp')}}" style="height: 100%; width: 100%"/>
+          <p>
+            $6,209.00
+          </p>
+          <div class="embed-responsive embed-responsive-16by9">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/P3Ldd__osNw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+        </div>
+        </div>
+{%endblock%}
+
+{% block footer %}
+
+{% endblock%}
+  
+</div>
+</section>
+</body>
+</html>

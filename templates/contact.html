@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+  <title>Captivate Interiors</title>
+
+</head>
+
+<body>
+    <section class="container-fluid p4 my-4 border style="background-color: rgb(255, 183, 0);"">
+        <div class="row">
+          <div class="col-sm-1 border">
+              <a href="user/add"><img src="{{url_for('static', filename='Icon.png')}}" style="height: 100%; width: 100%"/></a>
+          </div>
+          <div class="col-sm-10 border">
+            <p class="text-center header display-1">
+              Captivate Interiors
+            </div>
+          <div class="col-sm-11 border"></div>
+        </div>
+      <div class="row">
+        <div class="col border">
+          <nav class="navbar navbar-expand-sm bg-light navbar-light text-dark">
+            <div class="container-fluid">
+              <ul class="navbar-nav">
+                <li class="nav-item">
+                  <a class="nav-link"  href="/">Home</a>
+                </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="/contact">Contact</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="/about">About</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="/shop">Shop</a>
+                </li>
+              </ul>
+            </div>
+          </nav>
+        </div>
+    <!--Body text-->
+    <div class="row">
+      <div class="col border">
+        <p id="Head_Cnt" class="header display-6 border text-center" onclick="FontChange()">
+          Contact Us
+        </p>
+        <p id="Cnt_Info" onmouseover="Allign_right()" onmouseout="Allign_left()">
+          Address: Shop 10, Green Gables Shopping Centre, Mairangi Bay, Auckland 0630
+          <br>
+          Contact Number: 09 478 9997
+          <br>
+          Email Address: info@captivateinteriors.co.nz
+          <br>
+          Fax Number: +64 9-478 9997
+        </p>
+      </div>
+    </div>
+    <!--Form-->
+    <div class="row container border">
+      <div class="col-sm-5">
+        <form action="/contact">
+          <div class="mb-3 mt-3 col-auto">
+            <label for="name" class="form-label">Name:</label>
+            <input type="name" class="form-control" id="name" placeholder="Enter name" name="name">
+          </div>
+          <div class="mb-3 col-auto">
+            <label for="email" class="form-label">Email:</label>
+            <input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
+          </div>
+          <label for="comment">Subject</label>
+          <textarea class="form-control" rows="1" id="subject" name="text"></textarea>
+          <label for="comment">Comments:</label>
+          <textarea class="form-control" rows="4" id="comment" name="text"></textarea>
+          <button class="btn btn-primary">Submit</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="border text-center">
+      <footer>
+          <a href="https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwiP2723urj5AhWC2DgGHekpBlMQFnoECA0QAQ&url=https%3A%2F%2Fwww.facebook.com%2FCaptivateinteriors.co.nz%2F&usg=AOvVaw305PwrpyGW35urTsM392SZ">
+            <img class="img-fluid" src = "{{url_for('static', filename='facebook.png')}}" height="35px">
+          </a>
+      
+      
+          <a href="https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwiViODPurj5AhUI8TgGHXaDCewQFnoECAgQAQ&url=https%3A%2F%2Fwww.instagram.com%2Fcaptivate.interiors%2F%3Fhl%3Den&usg=AOvVaw0D2_a78qTFKGCi1Dfduj1p">
+            <img class="img-fluid" src = "{{url_for('static', filename='instagram.png')}}" height="35px">
+          </a>
+      
+      
+          <a href="https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwj6ubveurj5AhXr8DgGHcSyDuUQFnoECAkQAQ&url=https%3A%2F%2Fnz.linkedin.com%2Fin%2Fkendallotten&usg=AOvVaw0r1iS3EGOeCocITldJ4AQk">
+            <img class="img-fluid" src = "{{url_for('static', filename='linkedin.png')}}" height="35px">
+          </a>
+      
+      
+          <a href="https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwjA1-Dsurj5AhUc7DgGHXNTC-YQFnoECBEQAQ&url=https%3A%2F%2Ftwitter.com%2Finteriordesign%2Fstatus%2F819386015098007553&usg=AOvVaw3NLC_Dc5G_L2S4khJpkM6N">
+            <img class="img-fluid" src = "{{url_for('static', filename='twitter.png')}}" height="35px">
+          </a>
+        </footer>
+  </div>
+
+    </div>
+  </section>
+  <script>
+    function FontChange() {
+      var Heading = document.getElementById('Head_Cnt');
+
+      Heading.style.fontSize = "50px";
+      Heading.style.color = "blue";
+    }
+
+    function Allign_right() {
+      var Contact = document.getElementById('Cnt_Info');
+
+      Contact.style.float = "right";
+    }
+
+    function Allign_left() {
+      var Contact = document.getElementById('Cnt_Info');
+
+      Contact.style.float = "left";
+    }
+  </script>
+</body>
+
+</html>

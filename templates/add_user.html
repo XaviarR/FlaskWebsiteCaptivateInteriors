@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+{%block head%}
+
+{%endblock%}
+{%block body%}
+<h1>User List: </h1>
+<br/>
+<form action="/user/add" method="POST">
+    {{form.hidden_tag()}}
+    {{form.name.label(clas="form-label")}}
+
+    {{form.name(class="form-control")}}
+    <br/>
+    {{form.email.label(clas="form-label")}}
+
+    {{form.email(class="form-control")}}
+    <br/>
+    {{form.submit(class="btn btn-secondary")}}
+</form>
+
+<br/><br/>
+{% for our_user in our_users %}
+<table>
+    <tr>
+        <td>{{our_user.id }}. {{our_user.name }} - {{our_user.email}} 
+            <a href="/user/update/{{our_user.id}}">Update</a>
+            <a href="/user/delete/{{our_user.id}}">Delete</a>
+        </td>
+    </tr>
+</table>
+<br/>
+{% endfor %}
+{%endblock%} 
+{%block footer%}
+
+{%endblock%}
+
